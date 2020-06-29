@@ -1,0 +1,47 @@
+<head>
+	<title>
+		Search car
+	</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="./css/transport.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<div class="header">
+		<i class="material-icons md-48 header-icon light">local_taxi</i>
+		<!--TODO fix extra margin -->
+		<span class="header-text">PICK A RIDE</span>
+		<i class="material-icons md-48 header-icon right">person</i>
+	</div>
+	<div id="map-container">
+		<div id="map"></div>
+		<div class="grid-container map-grid">
+			<div class="grid-child on-top">
+				<div class="input-field">
+					<label>
+						Start From
+					</label>
+					<input type="text" placeholder="enter start location" id="from" onKeyUp="handleLocationInput()"></input>
+				</div>
+			</div>
+			<div class="grid-child on-top">
+				<div class="input-field">
+					<label>
+						Destination
+					</label>
+					<input type="text" id="to" placeholder="enter destination" onKeyUp="handleLocationInput()"></input>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+	
+	<div class="grid-container">
+	</div>
+	<a class="button submit disabled" onClick="confirmRide()" id="confirmRide">CONFIRM RIDE</a>
+	<script src="./js/transport.js"></script>
+	<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap">
+    </script>
+
+</body>
